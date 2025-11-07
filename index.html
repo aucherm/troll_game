@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title> Whack That Troll!</title>
+
+
+
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="left">
+            <h1>Whack That Troll! </h1>
+
+            <p>As you wander peacefully through the forest, the rustle of leaves is suddenly broken by a deep growl. A
+                troll steps out from behind the trees, blocking your path.</p>
+            <p>You’ll have to fight it — taking turns to attack until the creature runs out of health points. You can
+                strike it up to six times, but be carefull, the troll will fight back !</p>
+            <p>Ready ? Go !</p>
+
+
+            <p><span id="monster-pv"></span></p>
+            <p>Player : <span id="player-num">1</span></p>
+
+            <p>How many times will you attack?</p>
+
+            <input type="number" id="damage-input" placeholder="1 to 6" min="1" max="6">
+            <button id="attack-btn">Fight !</button>
+            <button id="restart-btn" style="display:none;">Restart</button>
+
+            <p id="message"></p>
+            <p id="copyright"> Copyright © 2025 Maëlle Aucher. Tous droits réservés.</p>
+            <div class="links">
+                <a href="https://github.com/aucherm" target="_blank" class="icon-link" alt="lien vers page GitHub">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/maëlle-aucher-502646137/" target="_blank" class="icon-link"
+                    alt="lien vers page LinkedIn">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="right" id="right-panel">
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
