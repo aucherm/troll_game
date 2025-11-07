@@ -66,9 +66,9 @@ function playTurn() {
 
         // Charger l'image du troll vaincu avant de changer le background
         const deadImg = new Image();
-        deadImg.src = 'dead.png';
+        deadImg.src = 'pictures/dead.png';
         deadImg.onload = () => {
-            rightPanel.style.backgroundImage = "url('dead.png')";
+            rightPanel.style.backgroundImage = "url('pictures/dead.png')";
         }
         return;
     }
@@ -78,9 +78,9 @@ function playTurn() {
     if (playerDead) {
         const rightPanel = document.getElementById("right-panel");
         const loseImg = new Image();
-        loseImg.src = 'lose.png';
+        loseImg.src = 'pictures/lose.png';
         loseImg.onload = () => {
-            rightPanel.style.backgroundImage = "url('lose.png')";
+            rightPanel.style.backgroundImage = "url('pictures/lose.png')";
 
         };
         return;

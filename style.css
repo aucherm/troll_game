@@ -27,7 +27,7 @@ body {
   }
 
   .right {
-    background-image: url(background.png);
+    background-image: url(pictures/background.png);
     background-size: cover;
   }
 }
@@ -56,7 +56,7 @@ body {
 }
 
 #copyright {
-  font-size: 15px;
+  font-size: 8px;
   position: fixed;
   bottom: 25px;
   left: 0;
@@ -66,7 +66,7 @@ body {
 }
 
 .links {
-  font-size: 19px;
+  font-size: 8px;
   position: fixed;
   bottom: 0;
   left: 0;
