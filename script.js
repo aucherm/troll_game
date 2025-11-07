@@ -106,9 +106,10 @@ function restartGame() {
 
 
     const rightPanel = document.getElementById("right-panel");
-    rightPanel.style.backgroundImage = "url('background.png')"; // 👈 ton image de base
-    attackBtn.disabled = false;
-    restartBtn.style.display = "none"; // on cache le bouton Restart
+    rightPanel.style.backgroundImage = "url('pictures/background.png')"; // image de base
+    attackBtn.style.display = "inline-block"; 
+    attackBtn.disabled = false; 
+    restartBtn.style.display = "none"; 
 }
 
 
