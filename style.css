@@ -16,7 +16,7 @@ body {
   .right {
     align-items: center;
     justify-content: center;
-    font-size: 23px;
+    font-size: 20px;
     color: #4F3B17;
   }
 
@@ -56,17 +56,16 @@ body {
 }
 
 #copyright {
-  font-size: 8px;
+  font-size: 15px;
   position: fixed;
   bottom: 25px;
   left: 0;
   width: 100%;
   text-align: left;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 .links {
-
   position: fixed;
   bottom: 0;
   left: 0;

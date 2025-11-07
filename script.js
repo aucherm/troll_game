@@ -25,7 +25,7 @@ function askDamages(player) {
 }
 
 function trollAttack() {
-    const trollDamage = Math.floor(Math.random() * 6) + 1; // dégâts du troll : 1 à 6
+    const trollDamage = Math.floor(Math.random() * 5) + 1; // dégâts du troll : 1 à 6
     playerHp -= trollDamage;
     messageDisplay.textContent += `The troll hits Player ${player}: ${trollDamage} time(s)!`;
 
