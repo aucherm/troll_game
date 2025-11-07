@@ -36,7 +36,7 @@ troll_game/
    ```bash
    git clone https://github.com/ton-utilisateur/troll_game.git
 
-2. **Copie colle**  :
+2. **clic**  :
    https://aucherm.github.io/troll_game/
 
 
