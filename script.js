@@ -6,8 +6,6 @@ let monsterHp = 35;
 let playerHp = 20;
 let player = 1;
 
-
-// éléments HTML
 const monsterDisplay = document.getElementById("monster-pv");
 const playerDisplay = document.getElementById("player-num");
 const messageDisplay = document.getElementById("message");
@@ -16,7 +14,7 @@ const attackBtn = document.getElementById("attack-btn");
 const restartBtn = document.getElementById("restart-btn");
 
 function askDamages(player) {
-    // On lit la valeur entrée dans l'input
+   
     const value = Number.parseInt(damageInput.value);
     if (isNaN(value) || value < 1 || value > 6) {
         return null;
@@ -25,21 +23,19 @@ function askDamages(player) {
 }
 
 function trollAttack() {
-    const trollDamage = Math.floor(Math.random() * 5) + 1; // dégâts du troll : 1 à 6
+    const trollDamage = Math.floor(Math.random() * 5) + 1;
     playerHp -= trollDamage;
     messageDisplay.textContent += `The troll hits Player ${player}: ${trollDamage} time(s)!`;
 
     if (playerHp <= 0) {
         playerHp = 0;
         messageDisplay.textContent += `\n💀 Player ${player} has been defeated!`;
-        attackBtn.style.display = "none"; // 👈 cache le bouton Attack
-        restartBtn.style.display = "inline-block"; // 👈 on montre le bouton Restart
-        return true; // indique que le joueur est mort
+        attackBtn.style.display = "none";
+        restartBtn.style.display = "inline-block"; 
+        return true; 
     }
-    return false; // joueur encore en vie
+    return false; 
 }
-
-
 
 function playTurn() {
     let damages = askDamages(player);
@@ -52,19 +48,19 @@ function playTurn() {
     monsterHp = attack(monsterHp, damages);
     if (monsterHp < 0) monsterHp = 0;
 
-    /*    monsterDisplay.textContent = monsterPv; */
+   
     messageDisplay.textContent = ``;
 
-    //si le troll est vaincu
+
     if (monsterHp <= 0) {
         messageDisplay.textContent = `🎉 Player ${player} has won !`;
-        attackBtn.style.display = "none"; // 👈 cache le bouton Attack
-        restartBtn.style.display = "inline-block"; // 👈 on montre le bouton Restart
+        attackBtn.style.display = "none"; 
+        restartBtn.style.display = "inline-block"; 
 
 
         const rightPanel = document.getElementById("right-panel");
 
-        // Charger l'image du troll vaincu avant de changer le background
+  
         const deadImg = new Image();
         deadImg.src = 'pictures/dead.png';
         deadImg.onload = () => {
@@ -73,7 +69,7 @@ function playTurn() {
         return;
     }
 
-    // attaque du troll
+
     const playerDead = trollAttack();
     if (playerDead) {
         const rightPanel = document.getElementById("right-panel");
@@ -86,20 +82,18 @@ function playTurn() {
         return;
     }
 
-    // changement de joueur
+ 
     player = (player === 1) ? 2 : 1;
     playerDisplay.textContent = player;
     damageInput.value = "";
 }
 
-// 🔁 Fonction pour recommencer la partie
 function restartGame() {
-    // Réinitialiser les variables
+
     monsterHp = 35;
     playerHp = 20;
     player = 1;
 
-    // Réinitialiser l'affichage
     playerDisplay.textContent = player;
     messageDisplay.textContent = "New game started! 🐉";
     damageInput.value = "";
@@ -113,9 +107,7 @@ function restartGame() {
 }
 
 
-// Initialisation
 playerDisplay.textContent = player;
 
-// Lancer un tour à chaque clic
 attackBtn.addEventListener("click", playTurn);
 restartBtn.addEventListener("click", restartGame);
