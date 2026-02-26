@@ -31,7 +31,7 @@ body {
   color: #f8f6f3;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 15px;
   padding: 0.5rem;
   cursor: pointer;
 }
@@ -52,7 +52,7 @@ body {
 
   .left {
     flex: 1;             
-    font-size: 16px;
+    font-size: 10px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,8 @@ body {
   }
 
   .right {
-    flex: 1;             
+    flex: 1; 
+    min-height: 300px;            
     background-position: center;
     background-size: cover;
   }
